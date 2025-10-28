@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: black;
   color: whitesmoke;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
@@ -20,35 +25,50 @@ body {
 
 .logo {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  color: rgba(255, 77, 77, 1);
-  font-size: 20px;
-  font-weight: bold;
+  align-items: center; /* Aligns text and image vertically */
+  gap: 8px; /* Space between diamond and NEXT text */
 }
 
 .logo-icon img {
   width: 24px;
   height: 24px;
+  vertical-align: middle; /* Ensures image aligns with text */
 }
+
+.logo-icon span {
+  display: inline-block;
+  line-height: 24px; /* Matches image height for perfect alignment */
+  color:rgba(255,77,77,1);
+}
+
 
 .menu-logo img {
   width: 28px;
   height: 28px;
-  filter: invert(1); /* Makes dark icon white */
+  filter: invert(1);
   cursor: pointer;
 }
 
 /* Hero Section */
 .hero {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 800;
   margin-bottom: 10px;
+}
+.hero p {
+  font-size: 30px;
+  font-weight: 800; 
+  margin-bottom: 30px;
 }
 
 .gradient-red {
@@ -64,31 +84,44 @@ body {
 }
 
 .hero p {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .cta {
   background: linear-gradient(90deg, rgba(255,77,77,1), rgba(255,102,204,1));
   color: whitesmoke;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 8px 16px; /* Reduced size */
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
-  margin: 0 auto;
+  margin-bottom: 50px; /* Space below button */
+  display: inline-block;
+  
+}
+
+.cta:hover {
+  background: linear-gradient(90deg, rgba(255,102,204,1), rgba(255,77,77,1));
 }
 
 .hero-image img {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 30px auto 0;
+  width: 220px; /* Compact image */
+  height: auto;
 }
 
-/* Responsive */
-@media (min-width: 786px) {
+/* Mobile adjustments */
+@media (max-width: 480px) {
   .hero h1 {
-    font-size: 48px;
+    font-size: 22px;
+  }
+
+  .cta {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .hero-image img {
+    width: 180px;
   }
 }
