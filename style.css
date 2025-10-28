@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 77, 77, 1);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-logo img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1); /* Makes dark icon white */
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.gradient-red {
+  background: linear-gradient(90deg, rgba(255,77,77,1), rgba(255,102,204,1));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-blue {
+  background: linear-gradient(90deg, rgba(0,198,255,1), rgba(125,42,232,1));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background: linear-gradient(90deg, rgba(255,77,77,1), rgba(255,102,204,1));
+  color: whitesmoke;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+/* Responsive */
+@media (min-width: 786px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+}
