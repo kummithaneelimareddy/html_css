@@ -174,3 +174,94 @@ body {
   color: blue;
   text-decoration: none;
 }
+/* MOBILE: up to 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .left ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .right {
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .cta {
+    width: 140px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .brand-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand-logos img {
+    height: 20px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
+/* TABLET: 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .cta {
+    width: 160px;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .brand-logos img {
+    height: 24px;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+}
+
